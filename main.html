@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="galleryOverlay"></div>
+      <div class="imgBox">
+            <span>&times;</span>
+            <img src="" alt="">
+      </div>
+      <div class="container" id="gallery">
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\a.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\b.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\c.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\d.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\e.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\f.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\g.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\h.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\e.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\i.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\j.jpg" alt="">
+            </div>
+            <div class="galleryItems">
+                  <img src="D:\html_css_javaS(code)\Build_Image_LightBox_Galary\h.jpg" alt="">
+            </div>
+      </div>
+</body>
+<script>
+      let overlay = document.querySelector(".galleryOverlay");
+let imageBox = document.querySelector(".imgBox");
+let img = document.querySelector(".imgBox img");
+let close = document.querySelector(".imgBox span");
+let gallery = document.querySelector("#gallery");
+
+gallery.addEventListener("click", (event) => {
+
+    let currentImagePath = event.target.src;
+
+    if (currentImagePath !== undefined) {
+
+        overlay.classList.add('galleryOverlayShow');
+        imageBox.classList.add('imgBoxShow');
+
+        img.src = currentImagePath;
+
+        console.log(currentImagePath);
+    }
+});
+
+close.addEventListener("click", () => {
+
+    overlay.classList.remove('galleryOverlayShow');
+    imageBox.classList.remove('imgBoxShow');
+
+});
+      /*let overlay = document.querySelector(".galleryOverlay");
+      let imageBox = document.querySelector(".imgBox");
+      var img = document.querySelector(".imgBox img");
+      let close = document.querySelector(".imgBox span");
+      let gallery = document.querySelector("#gallery");
+      gallery.addEventListener("click",(event)=>{
+            let currentImagePath = even.target.src;
+            if(currentImagePath!==undefined){
+                  overlay.classList.add('gallaryOverlayShow')
+                  imageBox.classList.add('imgBoxShow')
+                  img.src=currentImagePath;
+                  console.log(currentImagePath);
+            }
+      })
+      close.addEventListener("click",()=>{
+            overlay.classList.remove('galleryOverlayShow');
+            imageBox.classListlremove('imgBoxShow');
+      })*/
+</script>
+</html>
