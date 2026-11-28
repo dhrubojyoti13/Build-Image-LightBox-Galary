@@ -37,7 +37,7 @@ git clone https://github.com/dhrubojyoti13/Build-Image-LightBox-Galary.git
 Navigate to the project folder:
 
 ```bash
-cd Build_Image_LightBox_Galary
+cd Build-Image-LightBox-Galary
 ```
 
 ### 3. Run the Application
